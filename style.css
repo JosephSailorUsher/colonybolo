@@ -1,0 +1,155 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Main container styling */
+
+/* Special Attribute Styling */
+
+
+.mainContentArea {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+}
+/*                          */
+/* Row one(top row) styling */
+
+#rowOne {
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr;
+    width: 100%;
+    min-height: 60vh;
+}
+
+
+/* Message Feed Styling */
+
+#messageFeed {
+    position: relative;
+    margin: 0.8rem;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+}
+
+#newsFeed {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#feedTitle {
+    height: 10vh;
+    width: 100%;
+    border: 3px solid black;
+    text-align: center;
+    margin: 0;
+}
+
+.feedItem {
+    border: 3px solid black;
+    width: 100%;
+    margin: auto;
+    min-height: 6vh;
+    text-align: center;
+    margin: auto;
+}
+
+/* Attribute Area Styling */
+
+#attributeArea {
+    border: 3px solid black;
+    margin: 0.8rem;
+    padding: 0.8rem;
+    min-height: 25vh;
+    background-color: #f2f2f2;
+}
+
+.attributeBox {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: space-around;
+}
+
+.attributeBoxContent {
+    text-align: center;
+    border: 2px solid #333;
+    margin-left: 1rem;
+}
+
+/* Canvas Area Styling */
+
+#canvasDiv {
+    border: 3px solid #333;
+    margin: 0.8rem;
+    padding: 0;
+    border-radius: 10px;
+}
+
+/* Ad Area Styling */
+
+#adOne {
+    border: 3px solid #333;
+    margin: 0.8rem;
+    width: 8vw;
+    padding: 1rem;
+    background-color: #f2f2f2;
+}
+
+/*                             */
+/* Row two(bottom row) styling */
+
+#rowTwo {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width: 100%;
+    min-height: 35vh;
+}
+
+/* Math Problem Area Stlying */
+
+#mathProblemArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid black;
+    margin: 0.8rem;
+    border-radius: 10px;
+    width: 98vw;
+    background-color: #f2f2f2;
+}
+
+#problemDescriptionArea {
+    text-align: center;
+
+}
+
+#problemInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+#mathInput {
+    width: 30rem;
+    height: 2rem;
+}
+
+#submitButton {
+    width: 5rem;
+    height: 2rem;
+    background-color: #52bcfa;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
