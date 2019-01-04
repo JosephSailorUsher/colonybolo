@@ -15,4 +15,10 @@ Life Supplies
 Resources
 
 Your Dispatcher starts you out with one problem,
-you get to pick between 
+
+Dispatcher: "Ready up Operator, here's the first mission to establish Colony Zulu"
+Mission board: "3 + 5 = ?"
+Five randomized problems.
+Dispatcher: "80% chance of success, ready to launch?"
+Percentage depends on how many problems were correct or incorrect.
+
