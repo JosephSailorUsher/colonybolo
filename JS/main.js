@@ -25,26 +25,31 @@ var redraw = function() {
     circle('yellow', 20);
     //Move to over to draw first planet and rotate at it's orbit rate
     ctx.rotate(i / 300);
-    ctx.translate(-150, 0);
+    ctx.translate(-200, 0);
 
     // draw planet
-    circle('goldenrod', 15);
+    circle('lightblue', 15);
     //move back to the center
-    ctx.translate(150,0);
+    ctx.translate(200,0);
     ctx.rotate(i / 100);
-    ctx.translate(-70,-0);
+    ctx.translate(-90,-0);
     //rotate in the opposite direction
 
     // draw planet
-    circle('darkblue', 15);
+    circle('darkgreen', 15);
 
     //Recenter
-    ctx.translate(70,0);
+    ctx.translate(90,0);
     ctx.rotate(i/50);
-    ctx.translate(40,0);
+    ctx.translate(45,0);
 
-    circle('orange', 10);
+    circle('goldenrod', 10);
 
+    ctx.translate(-45,0);
+    ctx.rotate(-i/40);
+    ctx.translate(135,0);
+
+    circle('tan', 18);
 
     ctx.restore();
     i++;
