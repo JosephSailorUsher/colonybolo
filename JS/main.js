@@ -23,21 +23,29 @@ var redraw = function() {
     ctx.translate(w / 2, h / 2);
     // draw sun
     circle('yellow', 20);
-    // rotate + move along x
-    ctx.rotate(i / 100);
-    ctx.translate(100, 0);
+    //Move to over to draw first planet and rotate at it's orbit rate
+    ctx.rotate(i / 300);
+    ctx.translate(-150, 0);
+
     // draw planet
     circle('goldenrod', 15);
-    ctx.translate(-100, 0);
-    // rotate the other planet
-    ctx.rotate(i / 110);
-    ctx.translate(0, -75);
+    //move back to the center
+    ctx.translate(150,0);
+    ctx.rotate(i / 100);
+    ctx.translate(-70,-0);
+    //rotate in the opposite direction
+
     // draw planet
-    circle('skyblue', 9);
-    // rotate the next planet
-    ctx.translate(-150, 75);
-    // draw planet
-    circle('lawngreen', 10);
+    circle('darkblue', 15);
+
+    //Recenter
+    ctx.translate(70,0);
+    ctx.rotate(i/50);
+    ctx.translate(40,0);
+
+    circle('orange', 10);
+
+
     ctx.restore();
     i++;
     window.requestAnimationFrame(redraw);
