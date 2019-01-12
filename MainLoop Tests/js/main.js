@@ -1,4 +1,5 @@
 //Game Variables
+var boardDims = [3, 2];
 var term1 = 3;
 var term2 = 6;
 var answer = 18;
@@ -7,6 +8,17 @@ var choices = [3,6,18];
 var min = 1;
 var max = 9;
 
+Reset_Game();
+function Build_Game_Board() {
+
+}
+function Reset_Game() {
+  Display_Problem();
+  //clear the results
+  $("#results").text("");
+  //create the next problem
+  New_Problem();
+}
 function Display_Problem() {
   document.getElementById("problem-display").innerHTML = term1 + " x " + term2 + " = ?";
   document.getElementById("c1").innerHTML = choices[0];
@@ -22,7 +34,7 @@ function Check_Answer(c) {
     document.getElementById("results").innerHTML = "Incorrect.";
   }
 }
-function Randomize() {
+function New_Problem() {
   term1 = Math.floor(Math.random() * (+max - +min) + +min);
   term2 = Math.floor(Math.random() * (+max - +min) + +min);
   choices = [
@@ -32,12 +44,7 @@ function Randomize() {
   choices.sort();
   Display_Problem();
 }
-function Reset_Game() {
-  document.getElementById("results").innerHTML = "";
-  Randomize();
-}
 
-Reset_Game();
 
 //Player Input
 document.onkeydown = function(event) {
@@ -46,7 +53,7 @@ document.onkeydown = function(event) {
 	var key_code = event.keyCode;
 	document.getElementById('kp').innerHTML = key_press;
     document.getElementById('kc').innerHTML = key_code;
-	var status = document.getElementById('status');
+	var status = $("#status");
 	status.innerHTML = "DOWN Event Fired For : "+key_press;
 
   //answer input
