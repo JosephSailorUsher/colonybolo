@@ -2,7 +2,7 @@
 var term1 = 3;
 var term2 = 6;
 var answer = 18;
-var choices = [3,6,18,36];
+var choices = [3,6,18];
 //randomization Variables
 var min = 1;
 var max = 9;
@@ -12,7 +12,6 @@ function Display_Problem() {
   document.getElementById("c1").innerHTML = choices[0];
   document.getElementById("c2").innerHTML = choices[1];
   document.getElementById("c3").innerHTML = choices[2];
-  document.getElementById("c4").innerHTML = choices[3];
 }
 function Check_Answer(c) {
   answer = term1 * term2;
@@ -29,13 +28,13 @@ function Randomize() {
   choices = [
     term1 * Math.floor(Math.random() * (+max - +min) + +min),
     term2 * Math.floor(Math.random() * (+max - +min) + +min),
-    term1 * Math.floor(Math.random() * (+max - +min) + +min),
     term1 * term2];
   choices.sort();
   Display_Problem();
 }
 function Reset_Game() {
-    Randomize();
+  document.getElementById("results").innerHTML = "";
+  Randomize();
 }
 
 Reset_Game();
@@ -60,10 +59,9 @@ document.onkeydown = function(event) {
   else if(key_press == "3") {
     Check_Answer(2);
   }
-  else if(key_press == "4") {
-    Check_Answer(3);
+  else if(key_press == "r" || key_press == "R") {
+    Reset_Game();
   }
-  else {Reset_Game()};
 }
 document.onkeyup = function(event){
     var key_press = String.fromCharCode(event.keyCode);

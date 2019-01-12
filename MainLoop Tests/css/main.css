@@ -4,9 +4,30 @@ body {
   color: green;
 }
 
-.game-board {
-  background-color: black;
-  border-color: silver;
-  border-width: 10px;
-  border-style: dashed;
+#problem-display {
+  text-align: center;
+  font-size: 64px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.choice-grid {
+  border: 1px solid green;
+  padding: 20px;
+  margin: 10px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 15px;
+}
+#results {
+  text-align: center;
+  font-size: 64px;
+}
+#debug {
+  border: 1px solid green;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
 }
