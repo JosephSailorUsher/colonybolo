@@ -1,0 +1,11 @@
+body {
+  font-family: monospace;
+  background-color: gray;
+}
+
+.game-board {
+  background-color: gray;
+  border-color: silver;
+  border-width: 10px;
+  border-style: dashed;
+}
