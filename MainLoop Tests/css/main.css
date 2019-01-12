@@ -1,10 +1,11 @@
 body {
   font-family: monospace;
-  background-color: gray;
+  background-color: black;
+  color: green;
 }
 
 .game-board {
-  background-color: gray;
+  background-color: black;
   border-color: silver;
   border-width: 10px;
   border-style: dashed;

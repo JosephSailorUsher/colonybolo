@@ -1,29 +1,44 @@
 //Game Variables
-var problems = [3,6];
+var term1 = 3;
+var term2 = 6;
 var answer = 18;
 var choices = [3,6,18,36];
+//randomization Variables
+var min = 1;
+var max = 9;
 
 function Display_Problem() {
-  document.getElementById("problem-display").innerHTML = problems[0] + " x " + problems[1] + " = ?";
+  document.getElementById("problem-display").innerHTML = term1 + " x " + term2 + " = ?";
   document.getElementById("c1").innerHTML = choices[0];
   document.getElementById("c2").innerHTML = choices[1];
   document.getElementById("c3").innerHTML = choices[2];
   document.getElementById("c4").innerHTML = choices[3];
 }
-function Check_Answer(i) {
-  if(choices[i] == answer) {
+function Check_Answer(c) {
+  answer = term1 * term2;
+  if(choices[c] == answer) {
     document.getElementById("results").innerHTML = "Correct!";
   }
   else {
     document.getElementById("results").innerHTML = "Incorrect.";
   }
 }
+function Randomize() {
+  term1 = Math.floor(Math.random() * (+max - +min) + +min);
+  term2 = Math.floor(Math.random() * (+max - +min) + +min);
+  choices = [
+    term1 * Math.floor(Math.random() * (+max - +min) + +min),
+    term2 * Math.floor(Math.random() * (+max - +min) + +min),
+    term1 * Math.floor(Math.random() * (+max - +min) + +min),
+    term1 * term2];
+  choices.sort();
+  Display_Problem();
+}
+function Reset_Game() {
+    Randomize();
+}
 
-
-
-Display_Problem();
-
-
+Reset_Game();
 
 //Player Input
 document.onkeydown = function(event) {
@@ -48,6 +63,7 @@ document.onkeydown = function(event) {
   else if(key_press == "4") {
     Check_Answer(3);
   }
+  else {Reset_Game()};
 }
 document.onkeyup = function(event){
     var key_press = String.fromCharCode(event.keyCode);
