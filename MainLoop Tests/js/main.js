@@ -5,8 +5,8 @@ var term2 = 6;
 var answer = 18;
 var choices = [3,6,18];
 //randomization Variables
-var min = 1;
-var max = 9;
+var min = 2;
+var max = 10;
 
 Reset_Game();
 function Build_Game_Board() {
@@ -20,18 +20,18 @@ function Reset_Game() {
   New_Problem();
 }
 function Display_Problem() {
-  document.getElementById("problem-display").innerHTML = term1 + " x " + term2 + " = ?";
-  document.getElementById("c1").innerHTML = choices[0];
-  document.getElementById("c2").innerHTML = choices[1];
-  document.getElementById("c3").innerHTML = choices[2];
+  $("#problem-display").text(term1 + " x " + term2 + " = ?");
+  $("#c1").text(choices[0]);
+  $("#c2").text(choices[1]);
+  $("#c3").text(choices[2]);
 }
 function Check_Answer(c) {
   answer = term1 * term2;
   if(choices[c] == answer) {
-    document.getElementById("results").innerHTML = "Correct!";
+    $("#results").text("Correct!");
   }
   else {
-    document.getElementById("results").innerHTML = "Incorrect.";
+    $("#results").text("Incorrect!");
   }
 }
 function New_Problem() {
